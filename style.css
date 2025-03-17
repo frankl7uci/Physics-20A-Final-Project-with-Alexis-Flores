@@ -1,0 +1,465 @@
+
+:root {
+  --primary-color: #c1440e;
+  --secondary-color: #062c43;
+  --accent-color: #54e5ff;
+  --text-light: #f0f0f0;
+  --text-dark: #333;
+  --background-dark: #0c0c0c;
+  --background-light: #f5f5f5;
+  --card-bg: rgba(12, 12, 12, 0.85);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-light);
+  background-color: var(--background-dark);
+  background-image: url('https://c02.purpledshub.com/uploads/sites/41/2023/07/mars-thumbnail-fb84d10.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+header {
+  background-color: rgba(6, 44, 67, 0.9);
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: var(--text-light);
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: var(--text-light);
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+nav ul li a:hover {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+.hero {
+  height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://wallpapersok.com/images/high/mars-in-fiery-effect-r79bobs8vjx0jvwn.jpg');
+  background-size: cover;
+  background-position: center;
+  color: var(--text-light);
+  margin-bottom: 40px;
+}
+
+.hero-content h2 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  max-width: 700px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.rovers-section, .future-section {
+  margin-bottom: 60px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.rovers-section h2, .future-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: var(--primary-color);
+}
+
+.rovers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 20px;
+  width: 100%;
+  grid-auto-rows: auto;
+}
+
+.future-text-container {
+  width: 100%;
+  padding: 20px;
+}
+
+.future-text {
+  width: 100%;
+  background-color: rgba(6, 44, 67, 0.7);
+  border: 2px solid var(--accent-color);
+  border-radius: 10px;
+  padding: 20px;
+  color: var(--text-light);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rover-card, .future-card {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: var(--transition);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.rover-card:hover, .future-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.rover-card img, .future-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  max-height: 200px;
+  display: block;
+}
+
+.rover-card h3, .future-card h3 {
+  padding: 15px 20px 5px;
+  color: var(--accent-color);
+  font-size: 1.5rem;
+}
+
+.rover-card p, .future-card p {
+  padding: 0 20px 15px;
+  color: var(--text-light);
+}
+
+.rover-facts {
+  padding: 0 20px 20px;
+}
+
+.rover-facts li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.rover-facts li i {
+  margin-right: 10px;
+  color: var(--primary-color);
+}
+
+.click-for-more {
+  text-align: center;
+  padding: 8px 0;
+  margin: 0 20px 15px;
+  background-color: rgba(193, 68, 14, 0.2);
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.rover-card:hover .click-for-more {
+  background-color: rgba(193, 68, 14, 0.5);
+}
+
+.click-for-more i {
+  margin-right: 5px;
+  color: var(--accent-color);
+}
+
+.join-exploration {
+  background-color: var(--secondary-color);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.join-exploration h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--accent-color);
+}
+
+.join-exploration p {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 1.2rem;
+}
+
+.participation-ways {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.way-card {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 30px 20px;
+  border-radius: 10px;
+  transition: var(--transition);
+}
+
+.way-card:hover {
+  transform: translateY(-5px);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.way-card i {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.way-card h3 {
+  margin-bottom: 15px;
+  color: var(--accent-color);
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 30px 0;
+  text-align: center;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-left: 15px;
+  font-size: 1.5rem;
+  color: var(--text-light);
+  transition: var(--transition);
+}
+
+.social-links a:hover {
+  color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+.rover-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.rover-modal-content {
+  background-color: var(--card-bg);
+  margin: 5% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 900px;
+  max-height: 85vh;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  position: relative;
+}
+
+.rover-detail-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.rover-detail-header img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.rover-detail-title {
+  text-align: center;
+  width: 100%;
+}
+
+.rover-detail-title h2 {
+  color: var(--accent-color);
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+
+.rover-detail-title h3 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  font-weight: normal;
+}
+
+.rover-detail-content {
+  padding: 0 20px;
+}
+
+.rover-description {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.rover-specs, .rover-achievements {
+  margin-bottom: 30px;
+}
+
+.rover-specs h3, .rover-achievements h3 {
+  color: var(--accent-color);
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.rover-specs ul, .rover-achievements ul {
+  padding-left: 20px;
+}
+
+.rover-specs li, .rover-achievements li {
+  margin-bottom: 10px;
+  list-style-type: circle;
+}
+
+.rover-achievements li {
+  list-style-type: disc;
+}
+
+@media (min-width: 768px) {
+  .rover-detail-header {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .rover-detail-header img {
+    width: 50%;
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+  
+  .rover-detail-title {
+    text-align: left;
+  }
+}
+
+
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  nav ul {
+    margin-top: 15px;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin: 5px 10px;
+  }
+  
+  .hero-content h2 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+  
+  .rovers-section, .future-section {
+    padding: 30px 20px;
+  }
+  
+  footer .container {
+    flex-direction: column;
+  }
+  
+  .social-links {
+    margin-top: 15px;
+  }
+  
+  .social-links a {
+    margin: 0 10px;
+  }
+}
